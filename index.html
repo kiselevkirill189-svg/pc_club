@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO WOE | Компьютерный клуб</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Загрузка...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">NO WOE</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#configurations">Конфигурации</a></li>
+                <li><a href="#tournaments">Турниры</a></li>
+                <li><a href="#menu">Бар</a></li>
+                <li><a href="#gallery">Интерьер</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero__video" autoplay muted loop playsinline>
+            <source src="video/neon-background.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="hero__container">
+            <span class="hero__logo">NO WOE</span>
+            <p class="hero__subtitle">Киберспорт, бар, тусовка. Работаем 24/7</p>
+            <div class="hero__buttons">
+                <a href="#booking" class="btn btn--primary">Забронировать</a>
+                <a href="#configurations" class="btn btn--outline">Конфигурации</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Configurations Section -->
+    <section id="configurations">
+        <div class="section-divider"></div>
+        <div class="section-header fade-in">
+            <h2 class="section-title">КОНФИГУРАЦИИ</h2>
+            <p class="section-subtitle">Выберите идеальное место для вашей игры</p>
+        </div>
+        <div class="configurations fade-in">
+            <div class="config-grid">
+                <div class="config-card">
+                    <img src="img/standard.jpg" alt="Standard PC" class="config-image">
+                    <div class="config-content">
+                        <span class="config-badge">Стандарт</span>
+                        <h3 class="config-title">Gaming Zone</h3>
+                        <ul class="config-specs">
+                            <li><span>Процессор</span><span>Intel Core i5-13400F</span></li>
+                            <li><span>Видеокарта</span><span>RTX 4060 8GB</span></li>
+                            <li><span>ОЗУ</span><span>16GB DDR4</span></li>
+                            <li><span>Монитор</span><span>24" 165Hz</span></li>
+                            <li><span>Периферия</span><span>Logitech G Pro</span></li>
+                        </ul>
+                        <div class="config-price">150₽ <span>/ час</span></div>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%; display: block; text-align: center; text-decoration: none;">Забронировать</a>
+                    </div>
+                </div>
+                <div class="config-card">
+                    <img src="img/vip.jpeg" alt="VIP PC" class="config-image">
+                    <div class="config-content">
+                        <span class="config-badge" style="background: var(--gradient-2);">VIP</span>
+                        <h3 class="config-title">VIP Room</h3>
+                        <ul class="config-specs">
+                            <li><span>Процессор</span><span>Intel Core i7-14700K</span></li>
+                            <li><span>Видеокарта</span><span>RTX 4070 Ti 12GB</span></li>
+                            <li><span>ОЗУ</span><span>32GB DDR5</span></li>
+                            <li><span>Монитор</span><span>27" 240Hz</span></li>
+                            <li><span>Периферия</span><span>SteelSeries Pro</span></li>
+                        </ul>
+                        <div class="config-price">250₽ <span>/ час</span></div>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%; background: var(--gradient-2); display: block; text-align: center; text-decoration: none;">Забронировать</a>
+                    </div>
+                </div>
+                <div class="config-card">
+                    <img src="img/vip2.jpg" alt="Bootcamp PC" class="config-image">
+                    <div class="config-content">
+                        <span class="config-badge" style="background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);">Bootcamp</span>
+                        <h3 class="config-title">Команда (5 ПК)</h3>
+                        <ul class="config-specs">
+                            <li><span>Процессор</span><span>Intel Core i5-13400F</span></li>
+                            <li><span>Видеокарта</span><span>RTX 4060 8GB</span></li>
+                            <li><span>ОЗУ</span><span>16GB DDR4</span></li>
+                            <li><span>Монитор</span><span>24" 165Hz</span></li>
+                            <li><span>Зона</span><span>Отдельная комната</span></li>
+                        </ul>
+                        <div class="config-price">600₽ <span>/ час</span></div>
+                        <a href="#booking" class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%); display: block; text-align: center; text-decoration: none;">Забронировать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section (Топ Игр) -->
+    <section class="games">
+        <div class="section-divider"></div>
+        <div class="container">
+            <h2 class="section-title">ТОП <span class="neon-accent">ИГР</span></h2>
+            <div class="games__grid">
+                <div class="game-icon" data-game="cs2">
+                    <img src="img/cs22.jpg" alt="CS2" class="game-icon__image">
+                </div>
+                <div class="game-icon" data-game="dota2">
+                    <img src="img/dota22.jpeg" alt="Dota 2" class="game-icon__image">
+                </div>
+                <div class="game-icon" data-game="valorant">
+                    <img src="img/valorant.png" alt="Valorant" class="game-icon__image">
+                </div>
+                <div class="game-icon" data-game="apex">
+                    <img src="img/apex.png" alt="Apex Legends" class="game-icon__image">
+                </div>
+                <div class="game-icon" data-game="pubg">
+                    <img src="img/pubg.png" alt="PUBG" class="game-icon__image">
+                </div>
+                <div class="game-icon" data-game="genshin">
+                    <img src="img/genshin.png" alt="Genshin Impact" class="game-icon__image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Всплывающая подсказка для игр -->
+    <div class="game-tooltip" id="game-tooltip">
+        <div class="game-tooltip__content">
+            <img class="game-tooltip__image" src="" alt="">
+            <div class="game-tooltip__info">
+                <h4 class="game-tooltip__title"></h4>
+                <p class="game-tooltip__description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tournaments Section -->
+    <section class="tournaments-page" id="tournaments">
+        <!-- Киберпанк фон с линиями -->
+        <div class="cyber-bg">
+            <svg version="1.1" id="home-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 1820 1080" style="enable-background:new 0 0 1820 1080;" xml:space="preserve" preserveAspectRatio="none">
+            <g id="home">
+            <defs>
+                <rect id="masque" y="0.4" width="1820" height="1080"/>
+            </defs>
+            <clipPath id="cache">
+                <use xlink:href="#masque" style="overflow:visible;"/>
+            </clipPath>
+            <g id="light-green">
+                <line x1="630.8" y1="894.3" x2="476.3" y2="1048.8"/>
+                <line x1="858.2" y1="823.9" x2="1012.7" y2="669.4"/>
+                <line x1="1066.9" y1="458.2" x2="912.4" y2="612.7"/>
+                <line x1="1294.3" y1="387.8" x2="1448.8" y2="233.3"/>
+                <line x1="1503" y1="22.1" x2="1348.5" y2="176.6"/>
+                <line x1="895.6" y1="1166.6" x2="1050.1" y2="1012.1"/>
+                <line x1="1104.3" y1="800.9" x2="949.8" y2="955.4"/>
+                <line x1="1331.7" y1="730.5" x2="1486.2" y2="576"/>
+                <line x1="1540.4" y1="364.8" x2="1385.9" y2="519.3"/>
+                <line x1="1767.8" y1="294.4" x2="1922.3" y2="139.9"/>
+                <line x1="1976.5" y1="-71.3" x2="1822" y2="83.2"/>
+                <line x1="1369.1" y1="1073.2" x2="1523.6" y2="918.7"/>
+                <line x1="1577.8" y1="707.5" x2="1423.3" y2="862"/>
+                <line x1="1805.2" y1="637.1" x2="1959.7" y2="482.6"/>
+                <line x1="1624" y1="1041.4" x2="1469.4" y2="1195.9"/>
+                <line x1="-134.7" y1="674.9" x2="19.8" y2="520.4"/>
+                <line x1="74" y1="309.2" x2="-80.5" y2="463.7"/>
+                <line x1="301.4" y1="238.8" x2="455.9" y2="84.3"/>
+                <line x1="510.1" y1="-126.9" x2="355.6" y2="27.6"/>
+                <line x1="-88.6" y1="1008.9" x2="65.9" y2="854.4"/>
+                <line x1="120.1" y1="643.1" x2="-34.4" y2="797.7"/>
+                <line x1="347.5" y1="572.8" x2="502" y2="418.3"/>
+                <line x1="556.2" y1="207.1" x2="401.7" y2="361.6"/>
+                <line x1="783.6" y1="136.7" x2="938.1" y2="-17.8"/>
+                <line x1="157.6" y1="985.8" x2="3" y2="1140.3"/>
+                <line x1="384.9" y1="915.5" x2="539.4" y2="760.9"/>
+                <line x1="593.6" y1="549.7" x2="439.1" y2="704.3"/>
+                <line x1="821" y1="479.4" x2="975.5" y2="324.9"/>
+                <line x1="1029.7" y1="113.6" x2="875.2" y2="268.2"/>
+                <line x1="1257.1" y1="43.3" x2="1411.6" y2="-111.2"/>
+            </g>
+            <g id="pink">
+                <line x1="794.4" y1="883.4" x2="639.8" y2="1037.9"/>
+                <line x1="694.6" y1="834.8" x2="849.2" y2="680.3"/>
+                <line x1="1230.4" y1="447.3" x2="1075.9" y2="601.8"/>
+                <line x1="1130.7" y1="398.7" x2="1285.2" y2="244.2"/>
+                <line x1="1666.5" y1="11.2" x2="1512" y2="165.7"/>
+                <line x1="732" y1="1177.5" x2="886.6" y2="1023"/>
+                <line x1="1267.9" y1="790" x2="1113.3" y2="944.5"/>
+                <line x1="1168.1" y1="741.4" x2="1322.7" y2="586.9"/>
+                <line x1="1703.9" y1="353.9" x2="1549.4" y2="508.4"/>
+                <line x1="1604.2" y1="305.3" x2="1758.7" y2="150.8"/>
+                <line x1="1205.5" y1="1084.1" x2="1360.1" y2="929.6"/>
+                <line x1="1741.4" y1="696.5" x2="1586.8" y2="851.1"/>
+                <line x1="1641.6" y1="648" x2="1796.2" y2="493.5"/>
+                <line x1="1787.5" y1="1030.5" x2="1633" y2="1185"/>
+                <line x1="1687.8" y1="981.9" x2="1842.3" y2="827.4"/>
+                <line x1="200.1" y1="-44.4" x2="45.6" y2="110.1"/>
+                <line x1="237.5" y1="298.3" x2="83" y2="452.8"/>
+                <line x1="137.8" y1="249.7" x2="292.3" y2="95.2"/>
+                <line x1="673.6" y1="-137.8" x2="519.1" y2="16.7"/>
+                <line x1="283.7" y1="632.2" x2="129.2" y2="786.8"/>
+                <line x1="184" y1="583.7" x2="338.5" y2="429.2"/>
+                <line x1="719.8" y1="196.2" x2="565.2" y2="350.7"/>
+                <line x1="620" y1="147.6" x2="774.6" y2="-6.9"/>
+                <line x1="321.1" y1="974.9" x2="166.6" y2="1129.4"/>
+                <line x1="221.4" y1="926.4" x2="375.9" y2="771.8"/>
+                <line x1="757.2" y1="538.8" x2="602.7" y2="693.4"/>
+                <line x1="657.5" y1="490.3" x2="812" y2="335.8"/>
+                <line x1="1193.3" y1="102.7" x2="1038.7" y2="257.3"/>
+                <line x1="1093.5" y1="54.2" x2="1248.1" y2="-100.3"/>
+            </g>
+            <g id="green">
+                <line x1="225.8" y1="1151" x2="534.9" y2="841.9"/>
+                <line x1="827.1" y1="1003.3" x2="518" y2="1312.3"/>
+                <line x1="661.9" y1="714.9" x2="971" y2="405.9"/>
+                <line x1="1263.1" y1="567.2" x2="954.1" y2="876.3"/>
+                <line x1="1098" y1="278.8" x2="1407.1" y2="-30.2"/>
+                <line x1="1699.2" y1="131.1" x2="1390.2" y2="440.2"/>
+                <line x1="699.3" y1="1057.6" x2="1008.4" y2="748.5"/>
+                <line x1="1300.6" y1="909.9" x2="991.5" y2="1218.9"/>
+                <line x1="1135.4" y1="621.5" x2="1444.5" y2="312.4"/>
+                <line x1="1736.6" y1="473.8" x2="1427.6" y2="782.8"/>
+                <line x1="1571.5" y1="185.4" x2="1880.6" y2="-123.6"/>
+                <line x1="1172.8" y1="964.2" x2="1481.9" y2="655.1"/>
+                <line x1="1774.1" y1="816.5" x2="1465" y2="1125.5"/>
+                <line x1="1608.9" y1="528.1" x2="1918" y2="219"/>
+                <line x1="1219" y1="1298.1" x2="1528" y2="989.1"/>
+                <line x1="1655.1" y1="862" x2="1964.1" y2="553"/>
+                <line x1="232.8" y1="75.5" x2="-76.2" y2="384.6"/>
+                <line x1="270.2" y1="418.2" x2="-38.8" y2="727.3"/>
+                <line x1="105.1" y1="129.8" x2="414.2" y2="-179.2"/>
+                <line x1="706.3" y1="-17.9" x2="397.3" y2="291.2"/>
+                <line x1="-284.8" y1="899.9" x2="24.2" y2="590.8"/>
+                <line x1="316.4" y1="752.2" x2="7.3" y2="1061.2"/>
+                <line x1="151.3" y1="463.8" x2="460.3" y2="154.7"/>
+                <line x1="752.5" y1="316.1" x2="443.4" y2="625.1"/>
+                <line x1="587.3" y1="27.7" x2="896.4" y2="-281.4"/>
+                <line x1="1188.6" y1="-120" x2="879.5" y2="189"/>
+                <line x1="-247.4" y1="1242.5" x2="61.6" y2="933.5"/>
+                <line x1="188.7" y1="806.4" x2="497.7" y2="497.4"/>
+                <line x1="789.9" y1="658.8" x2="480.8" y2="967.8"/>
+                <line x1="624.8" y1="370.4" x2="933.8" y2="61.3"/>
+                <line x1="1226" y1="222.7" x2="916.9" y2="531.7"/>
+                <line x1="1662.1" y1="-213.4" x2="1353" y2="95.6"/>
+            </g>
+            </g>
+            </svg>
+        </div>
+
+        <div class="container">
+            <h1 class="tournaments-page__title">ТУРНИРЫ <span class="neon-accent">2026</span></h1>
+            <p class="tournaments-page__subtitle">Следите за актуальными турнирами и регистрируйте свои команды</p>
+
+            <!-- Таблица с турнирами -->
+            <div class="tournaments-list">
+                <div class="tournaments-list__header">
+                    <span class="tournaments-list__header-item">Турнир</span>
+                    <span class="tournaments-list__header-item">Дисциплина</span>
+                    <span class="tournaments-list__header-item">Даты проведения</span>
+                    <span class="tournaments-list__header-item">Статус</span>
+                </div>
+
+                <div class="tournament-row">
+                    <span class="tournament-row__title">VCL Japan: Split 1 2026</span>
+                    <span class="game-tag valorant-tag">Valorant</span>
+                    <span class="tournament-row__date">19.03.26 - 16.04.26</span>
+                    <span class="status-badge status-badge--active">Регистрация</span>
+                </div>
+
+                <div class="tournament-row">
+                    <span class="tournament-row__title">VCL EMEA: Stage 1 2026</span>
+                    <span class="game-tag valorant-tag">Valorant</span>
+                    <span class="tournament-row__date">19.03.26 - 29.03.26</span>
+                    <span class="status-badge status-badge--active">Регистрация</span>
+                </div>
+
+                <div class="tournament-row">
+                    <span class="tournament-row__title">ESL Challenger League Oceania Cup #2 Season 51 2026</span>
+                    <span class="game-tag cs2-tag">CS2</span>
+                    <span class="tournament-row__date">20.03.26 - 27.03.26</span>
+                    <span class="status-badge status-badge--soon">Скоро</span>
+                </div>
+
+                <div class="tournament-row">
+                    <span class="tournament-row__title">ESL Challenger League Asia-Pacific Cup 2 Season 51 2026</span>
+                    <span class="game-tag cs2-tag">CS2</span>
+                    <span class="tournament-row__date">20.03.26 - 27.03.26</span>
+                    <span class="status-badge status-badge--active">Регистрация</span>
+                </div>
+
+                <div class="tournament-row">
+                    <span class="tournament-row__title">ESL Challenger League South America Cup #2 Season 51 2026</span>
+                    <span class="game-tag cs2-tag">CS2</span>
+                    <span class="tournament-row__date">20.03.26 - 28.03.26</span>
+                    <span class="status-badge status-badge--active">Регистрация</span>
+                </div>
+
+                <div class="tournament-row">
+                    <span class="tournament-row__title">ESL One Birmingham 2026</span>
+                    <span class="game-tag dota2-tag">Dota 2</span>
+                    <span class="tournament-row__date">21.03.26 - 29.03.26</span>
+                    <span class="status-badge status-badge--active">Регистрация</span>
+                </div>
+            </div>
+
+            <!-- Блок регистрации команды -->
+            <div class="team-registration">
+                <h2 class="team-registration__title">ХОТИТЕ УЧАСТВОВАТЬ?</h2>
+                <p class="team-registration__text">Зарегистрируйте свою команду на турнир</p>
+                <a href="#contacts" class="btn btn--primary btn--large">СВЯЗАТЬСЯ С НАМИ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Интерьер) -->
+    <section class="gallery" id="gallery">
+        <div class="section-divider"></div>
+        <div class="container">
+            <h2 class="section-title"><span class="neon-accent">ИНТЕРЬЕР</span></h2>
+            <div class="carousel-js" id="carousel-js">
+                <div class="group-js" id="group-js">
+                    <div class="card">
+                        <img src="img/vip2.jpg" alt="VIP зона">
+                        <span class="card-label">VIP</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/bar.jpg" alt="Бар">
+                        <span class="card-label">БАР</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/main-hall.jpg" alt="Основной зал">
+                        <span class="card-label">МЕЙН ХОЛЛ</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/vip-room.jpg" alt="VIP комната">
+                        <span class="card-label">VIP КОМНАТА</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/lounge.jpg" alt="Лаунж зона">
+                        <span class="card-label">ЛАУНЖ</span>
+                    </div>
+                    <div class="card">
+                        <img src="img/cyber.jpg" alt="Кибер зона">
+                        <span class="card-label">КИБЕР</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="section-divider"></div>
+        <div class="section-header fade-in">
+            <h2 class="section-title">БАР / МЕНЮ</h2>
+            <p class="section-subtitle">Энергия для твоих побед</p>
+        </div>
+        <div class="menu-section fade-in">
+            <div class="menu-categories">
+                <button class="menu-category-btn active" onclick="filterMenu('all')">Все</button>
+                <button class="menu-category-btn" onclick="filterMenu('drinks')">Напитки</button>
+                <button class="menu-category-btn" onclick="filterMenu('snacks')">Снеки</button>
+                <button class="menu-category-btn" onclick="filterMenu('energy')">Энергетики</button>
+            </div>
+            <div class="menu-grid" id="menuGrid">
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-info">
+                        <h4>Coca-Cola 0.5л</h4>
+                        <p>Охлажденный</p>
+                    </div>
+                    <div class="menu-item-price">100₽</div>
+                </div>
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-info">
+                        <h4>Энергетик Adrenaline 0.5л</h4>
+                        <p>Разные вкусы</p>
+                    </div>
+                    <div class="menu-item-price">150₽</div>
+                </div>
+                <div class="menu-item" data-category="energy">
+                    <div class="menu-item-info">
+                        <h4>Monster Energy 0.5л</h4>
+                        <p>Original / Ultra</p>
+                    </div>
+                    <div class="menu-item-price">180₽</div>
+                </div>
+                <div class="menu-item" data-category="energy">
+                    <div class="menu-item-info">
+                        <h4>Red Bull 0.25л</h4>
+                        <p>Классический</p>
+                    </div>
+                    <div class="menu-item-price">150₽</div>
+                </div>
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-item-info">
+                        <h4>Чипсы Lay's</h4>
+                        <p>Разные вкусы</p>
+                    </div>
+                    <div class="menu-item-price">120₽</div>
+                </div>
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-item-info">
+                        <h4>Сникерс</h4>
+                        <p>Шоколадный батончик</p>
+                    </div>
+                    <div class="menu-item-price">80₽</div>
+                </div>
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-info">
+                        <h4>Кофе Americano</h4>
+                        <p>Свежесваренный</p>
+                    </div>
+                    <div class="menu-item-price">120₽</div>
+                </div>
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-item-info">
+                        <h4>Печенье Oreo</h4>
+                        <p>Классическое</p>
+                    </div>
+                    <div class="menu-item-price">90₽</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="section-divider"></div>
+        <div class="section-header fade-in">
+            <h2 class="section-title">БРОНИРОВАНИЕ</h2>
+            <p class="section-subtitle">Забронируй место прямо сейчас</p>
+        </div>
+        <div class="booking-section fade-in">
+            <!-- Уведомление о том, что бронирование через контакт -->
+            <div class="booking-info">
+                <p class="booking-info__text">
+                    📞 Для бронирования позвоните нам или напишите в мессенджеры:<br>
+                    <strong>+7 (999) 000-00-00</strong>
+                </p>
+                <div class="booking-contacts">
+                    <a href="tel:+79990000000" class="btn btn--primary">📞 Позвонить</a>
+                    <a href="#contacts" class="btn btn--outline">💬 Написать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts" id="contacts">
+        <div class="section-divider"></div>
+        <div class="section-header fade-in">
+            <h2 class="section-title">КОНТАКТЫ</h2>
+            <p class="section-subtitle">Свяжитесь с нами любым удобным способом</p>
+        </div>
+        <div class="contacts-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h4>Адрес</h4>
+                <p>г. Москва, ул. Примерная, д. 1</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h4>Телефон</h4>
+                <p>+7 (999) 000-00-00</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">⏰</div>
+                <h4>Режим работы</h4>
+                <p>24/7 без выходных</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h4>Email</h4>
+                <p>info@nowoe-club.ru</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-link">VK</a>
+            <a href="#" class="social-link">TG</a>
+            <a href="#" class="social-link">DS</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NO WOE</h4>
+                <p>Компьютерный клуб нового поколения</p>
+            </div>
+            <div class="footer-section">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#configurations">Конфигурации</a></li>
+                    <li><a href="#tournaments">Турниры</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Документы</h4>
+                <ul>
+                    <li><a href="#" onclick="openDocModal('privacy'); return false;">Политика конфиденциальности</a></li>
+                    <li><a href="#" onclick="openDocModal('terms'); return false;">Правила клуба</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NO WOE Computer Club. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacyModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDocModal('privacy')">&times;</button>
+            <h3 class="modal-title">Политика конфиденциальности</h3>
+            <div class="doc-content">
+                <p>Мы уважаем вашу конфиденциальность и обязуемся защищать ваши персональные данные.</p>
+                <h4>1. Сбор информации</h4>
+                <p>Мы собираем только ту информацию, которую вы предоставляете нам добровольно.</p>
+                <h4>2. Использование информации</h4>
+                <p>Собранная информация используется исключительно для связи с вами и предоставления услуг.</p>
+                <h4>3. Защита данных</h4>
+                <p>Мы принимаем все необходимые меры для защиты ваших персональных данных.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeDocModal('terms')">&times;</button>
+            <h3 class="modal-title">Правила клуба</h3>
+            <div class="doc-content">
+                <p>Добро пожаловать в NO WOE! Пожалуйста, ознакомьтесь с правилами посещения.</p>
+                <h4>1. Общие правила</h4>
+                <p>Запрещено приносить свои напитки и еду. Запрещено курение в помещении.</p>
+                <h4>2. Бронирование</h4>
+                <p>Бронь действительна в течение 30 минут после указанного времени.</p>
+                <h4>3. Оплата</h4>
+                <p>Оплата производится почасово или по факту посещения.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span class="notification-icon" id="notificationIcon">✓</span>
+        <span class="notification-message" id="notificationMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
